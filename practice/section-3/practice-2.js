@@ -1,5 +1,13 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+  var resultUpdatedCollection = [];
+
+  for(var index of collectionA){
+  	if(objectB.value.includes(index.key)){
+  		index.count = index.count - Math.floor(index.count/3);
+  	}
+  	resultUpdatedCollection.push(index);
+  }
+  return resultUpdatedCollection;
 }
