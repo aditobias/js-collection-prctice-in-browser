@@ -1,9 +1,9 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  var resultUpdatedCollection = [];
+  let resultUpdatedCollection = [];
 
-  for(var index of collectionA){
+  for(let index of collectionA){
   	if(objectB.value.includes(index.key)){
   		index.count = index.count - Math.floor(index.count/3);
   	}

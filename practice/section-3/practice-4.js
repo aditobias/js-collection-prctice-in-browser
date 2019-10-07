@@ -4,9 +4,9 @@ function createUpdatedCollection(collectionA, objectB) {
   var collectionC = [];
   var newCollectionC = [];
   	for(var index in collectionA){
-		var getInitialFind = collectionC.find(result => result.key == collectionA[index]);
+		var getInitialFind = collectionC.find(result => result.key === collectionA[index]);
 
-		if(getInitialFind != undefined){
+		if(getInitialFind !== undefined){
 			getInitialFind.count = getInitialFind.count + 1;
 		}
 		else{
